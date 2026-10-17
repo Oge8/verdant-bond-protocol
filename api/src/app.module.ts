@@ -17,6 +17,7 @@ import { RateLimitGuard } from './common/guards/rate-limit.guard';
 import { AuditInterceptor } from './common/interceptors/audit.interceptor';
 import { IdempotencyInterceptor } from './common/interceptors/idempotency.interceptor';
 import { OpsModule } from './ops/ops.module';
+import { PolicyModule } from './policy/policy.module';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { OpsModule } from './ops/ops.module';
     FeesModule,
     AuthorizationsModule,
     StatusModule,
+    PolicyModule,
   ],
   providers: [
     { provide: APP_FILTER, useClass: Rfc7807ExceptionFilter },
