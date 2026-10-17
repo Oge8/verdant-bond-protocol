@@ -18,6 +18,7 @@ import { AuditInterceptor } from './common/interceptors/audit.interceptor';
 import { IdempotencyInterceptor } from './common/interceptors/idempotency.interceptor';
 import { OpsModule } from './ops/ops.module';
 import { PolicyModule } from './policy/policy.module';
+import { LedgerModule } from './ledger/ledger.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { PolicyModule } from './policy/policy.module';
     ExportsModule,
     ComplianceModule,
     AuditModule,
+    LedgerModule,
     RecoveryModule,
     MigrationSafetyModule,
     ImpersonationModule,
